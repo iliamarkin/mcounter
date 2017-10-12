@@ -1,0 +1,36 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Libraries
+    daggerVersion = '2.11'
+    butterKnifeVersion = '8.8.1'
+    rxJavaVersion = '2.1.5'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    gsonVersion = '2.8.2'
+    streamsVersion = '1.5.5'
+    moxyVersion = '1.5.3'
+
+    appDependencies = [
+            daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger              : "com.google.dagger:dagger:${daggerVersion}",
+            butterKnife         : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            rxJava              : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid           : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation     : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            streamSupport       : "net.sourceforge.streamsupport:streamsupport:${streamsVersion}",
+            streamSupportCFuture: "net.sourceforge.streamsupport:streamsupport-cfuture:${streamsVersion}",
+            streamSupportAtomic : "net.sourceforge.streamsupport:streamsupport-atomic:${streamsVersion}",
+            streamSupportFlow   : "net.sourceforge.streamsupport:streamsupport-flow:${streamsVersion}",
+            streamSupportLiteral: "net.sourceforge.streamsupport:streamsupport-literal:${streamsVersion}",
+            moxy                : "com.arello-mobile:moxy:${moxyVersion}",
+            moxyAndroid         : "com.arello-mobile:moxy-android:${moxyVersion}",
+            moxyAppCompat       : "com.arello-mobile:moxy-app-compat:${moxyVersion}",
+            moxyCompiler        : "com.arello-mobile:moxy-compiler:${moxyVersion}"
+    ]
+}
