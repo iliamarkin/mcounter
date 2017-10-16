@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">money_counter</string>
+    <string name="app_name">mcounter</string>
+
+    <!--Auth values-->
+    <string name="google_play_services_error">Google Play Services error.</string>
+    <string name="sign_in">Войти</string>
+    <string name="info">Информация</string>
+
 </resources>

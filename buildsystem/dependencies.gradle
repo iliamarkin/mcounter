@@ -15,6 +15,7 @@ ext {
     gsonVersion = '2.8.2'
     streamsVersion = '1.5.5'
     moxyVersion = '1.5.3'
+    playServicesVersion = '9.0.0'
 
     appDependencies = [
             daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
@@ -31,6 +32,9 @@ ext {
             moxy                : "com.arello-mobile:moxy:${moxyVersion}",
             moxyAndroid         : "com.arello-mobile:moxy-android:${moxyVersion}",
             moxyAppCompat       : "com.arello-mobile:moxy-app-compat:${moxyVersion}",
-            moxyCompiler        : "com.arello-mobile:moxy-compiler:${moxyVersion}"
+            moxyCompiler        : "com.arello-mobile:moxy-compiler:${moxyVersion}",
+            fireBaseAuth        : "com.google.firebase:firebase-auth:${playServicesVersion}",
+            fireBaseCore        : "com.google.firebase:firebase-core:${playServicesVersion}",
+            playServices        : "com.google.android.gms:play-services-auth:${playServicesVersion}"
     ]
 }

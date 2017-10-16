@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 25
@@ -19,6 +20,18 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layouts/activity',
+                    'src/main/res/layouts/fragment',
+                    'src/main/res/layouts/toolbar',
+                    'src/main/res/layouts/content',
+                    'src/main/res/layouts',
+                    'src/main/res'
+            ]
         }
     }
 }
@@ -45,16 +58,19 @@ dependencies {
     //Other libraries
     def presentationDependencies = rootProject.ext.appDependencies
     kapt presentationDependencies.daggerCompiler
+    kapt presentationDependencies.moxyCompiler
     compile presentationDependencies.dagger
     compile presentationDependencies.butterKnife
     compile presentationDependencies.rxJava
     compile presentationDependencies.rxAndroid
-    provided presentationDependencies.javaxAnnotation
     compile presentationDependencies.streamSupport
     compile presentationDependencies.moxy
     compile presentationDependencies.moxyAndroid
     compile presentationDependencies.moxyAppCompat
-    kapt presentationDependencies.moxyCompiler
+    compile presentationDependencies.fireBaseAuth
+    compile presentationDependencies.fireBaseCore
+    compile presentationDependencies.playServices
+    provided presentationDependencies.javaxAnnotation
 }
 repositories {
     mavenCentral()

@@ -7,7 +7,10 @@ import ru.markin.mcounter.app.di.DaggerAppComponent
 class App : Application() {
 
     companion object {
-        lateinit var appComponent: AppComponent
+        var appComponent: AppComponent? = null
+            private set(value) {
+                field = value
+            }
     }
 
     override fun onCreate() {
